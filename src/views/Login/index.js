@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 import { Eye, EyeOff } from 'lucide-react'; // Asegúrate de instalar lucide-react
 
 const Login = () => {
-  const { saveUser } = useAccountUser();
+  const { saveUser, fetchUser } = useAccountUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -68,6 +68,7 @@ const Login = () => {
         }
 
         saveUser({ ...data, username: email }, rememberMe);
+        await fetchUser();
 
         // Check for the token after login
         const token = Cookies.get('Authorize');
