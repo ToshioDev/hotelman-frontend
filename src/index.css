@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar CSS */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Color del track del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #6b7280; /* Color del thumb del scrollbar */
+    border-radius: 4px; /* Borde redondeado */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #4b5563; /* Color del thumb al hacer hover */
+  }
